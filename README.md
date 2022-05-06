@@ -3,7 +3,9 @@
 @@ Chapter_1 Quests @@
 ```
 
-##### Day_1
+```diff
+- Day_1
+```
 
 > ###### 1. Explain what the Blockchain is in your own words.
   ##### A blockchain is a public, decentralized, distributed, digital ledger that records blocks of data(transactions) connected by cryptography.
@@ -13,7 +15,9 @@
   
 > ###### 3. Explain the difference between a script and a transaction.
  ##### Both script and transaction are Cadence snippets, but are entirely different in terms of functionality. Transactions can access signing accounts, fetch their storage values, executes on those values, and can contain post conditions. Scripts do not have permission to change data on the blockchain and can only read from the public account storage.
-##### Day_2
+```diff
+- Day_2
+```
 
 > ###### 1. What are the 5 Cadence Programming Language Pillars?
  ##### Safety and Security: Safety entails that the smart contract is bug-free and able to carry out it's function. Security is prevention of attacks in the network and smart contracts. Both safey and security are important because of the immutable nature of blockchain technology.
