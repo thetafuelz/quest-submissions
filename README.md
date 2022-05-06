@@ -1,5 +1,5 @@
 ##### quest-submissions
-#### @@Chapter_1 Quests@@
+#### <span style="color: green"> Chapter_1 Quests </span>
 
 ##### Day_1
 
