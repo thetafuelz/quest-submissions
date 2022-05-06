@@ -1,5 +1,7 @@
 ##### quest-submissions
-#### Chapter_1 Quests
+```diff
+@@ Chapter_1 Quests @@
+```
 
 ##### Day_1
 
@@ -22,6 +24,7 @@
 > ###### 2. In your opinion, even without knowing anything about the Blockchain or coding, why could the 5 Pillars be useful (you don't have to answer this for #5)?
  ##### The 5 Cadence Pillars are useful because in reality, programming languages all strive to perfect these areas so more developers will use their language and build a vast ecosystem.
 
-#### Chapter_2 Quests
-
+```diff
+@@ Chapter_2 Quests @@
+```
 ##### Day_1
