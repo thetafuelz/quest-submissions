@@ -21,3 +21,7 @@
  #### Resource Oriented Programming: Cadence’s strong static type system ensures that resources can only exist in one location at a time and cannot be copied or lost because of a coding mistake. Cadence’s resources directly tie an asset’s ownership to the account that owns it by saving the resource in the account’s storage. As a result, ownership isn’t centralized in a smart contract’s storage. Each account owns its assets, and the assets can be transferred freely between accounts without the need for arbitration by a central smart contract.
 > ###### 2. In your opinion, even without knowing anything about the Blockchain or coding, why could the 5 Pillars be useful (you don't have to answer this for #5)?
  ##### The 5 Cadence Pillars are useful because in reality, programming languages all strive to perfect these areas so more developers will use their language and build a vast ecosystem.
+
+#### Chapter_2 Quests
+
+##### Day_1
