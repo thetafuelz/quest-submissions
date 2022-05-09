@@ -38,3 +38,13 @@
 ![alt text](https://github.com/thetafuelz/quest-submissions/blob/cdb392f51b2696468bb0311c9df76b82480a7e8d/img/Ch2D1.JPG)
 2.
 ![alt text](https://github.com/thetafuelz/quest-submissions/blob/cdb392f51b2696468bb0311c9df76b82480a7e8d/img/Ch2D2.JPG)
+
+```diff
+- Day_2
+```
+```diff
+- Day_3
+```
+```diff
+- Day_4
+```
