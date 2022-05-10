@@ -77,3 +77,13 @@ How to fix it
 > ###### 4. Add a transaction to call that function in step 3.
 
 > ###### 5. Add a script to read the Struct you defined
+
+```diff
+@@ Chapter_3 Quests @@
+```
+```diff
+
+```diff
+@@ Chapter_4Quests @@
+```
+```diff
