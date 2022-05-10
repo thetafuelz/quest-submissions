@@ -42,6 +42,14 @@
 ```diff
 - Day_2
 ```
+> ###### 1. Explain why we wouldn't call changeGreeting in a script.
+
+> ###### 2. What does the AuthAccount mean in the prepare phase of the transaction?
+
+> ###### 3. What is the difference between the prepare phase and the execute phase in the transaction?
+
+> ###### 4. This is the hardest quest so far, so if it takes you some time, do not worry! I can help you in the Discord if you have questions.
+
 ```diff
 - Day_3
 ```
