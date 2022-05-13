@@ -43,7 +43,7 @@
 - Day_2
 ```
 > ###### 1. Explain why we wouldn't call changeGreeting in a script.
-##### We wouldn't call changeGreeting in a script because
+> ##### We wouldn't call changeGreeting in a script because 
 > ###### 2. What does the AuthAccount mean in the prepare phase of the transaction?
 
 > ###### 3. What is the difference between the prepare phase and the execute phase in the transaction?
