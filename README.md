@@ -79,7 +79,9 @@ How to fix it
 > ###### 4. Add a transaction to call that function in step 3.
 
 > ###### 5. Add a script to read the Struct you defined
-
+https://github.com/thetafuelz/quest-submissions/blob/39e442a6e4d4629dcdeadf71e3d9c191fcdfc2c3/img/Ch2D2_1.JPG
+https://github.com/thetafuelz/quest-submissions/blob/d441b0fcef9e8067a2f4794fe0a9adfda1900a95/img/Ch2D2_2.JPG
+https://github.com/thetafuelz/quest-submissions/blob/d441b0fcef9e8067a2f4794fe0a9adfda1900a95/img/Ch2D2_3.JPG
 ```diff
 @@ Chapter_3 Quests @@
 ```
