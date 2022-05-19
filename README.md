@@ -49,7 +49,9 @@
 > ###### 3. What is the difference between the prepare phase and the execute phase in the transaction?
    ##### Prepare phase accesses data and the execute phase chases data on the smart contract.
 > ###### 4. This is the hardest quest so far, so if it takes you some time, do not worry! I can help you in the Discord if you have questions.
-
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/cdb392f51b2696468bb0311c9df76b82480a7e8d/img/Ch2D2_1.JPG)
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/cdb392f51b2696468bb0311c9df76b82480a7e8d/img/Ch2D2_2.JPG)
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/cdb392f51b2696468bb0311c9df76b82480a7e8d/img/Ch2D2_3.JPG)
 ```diff
 - Day_3
 ```
