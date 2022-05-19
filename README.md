@@ -43,11 +43,11 @@
 - Day_2
 ```
 > ###### 1. Explain why we wouldn't call changeGreeting in a script.
-   ##### We wouldn't call changeGreeting in a script because a script is only able to read
+   ##### We wouldn't call changeGreeting in a script because a script is only to view state not modify it, so changing the greeting can only be done in the transaction.
 > ###### 2. What does the AuthAccount mean in the prepare phase of the transaction?
-
+   ##### AuthAccount means you can access your data that is stored on your account unlike Ethereum where the data is stored on the smart contract.
 > ###### 3. What is the difference between the prepare phase and the execute phase in the transaction?
-
+   ##### Prepare phase accesses data and the execute phase chases data on the smart contract.
 > ###### 4. This is the hardest quest so far, so if it takes you some time, do not worry! I can help you in the Discord if you have questions.
 
 ```diff
