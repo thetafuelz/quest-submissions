@@ -56,14 +56,15 @@
 - Day_3
 ```
 > ###### 1. In a script, initialize an array (that has length == 3) of your favourite people, represented as Strings, and log it.
-
+  
 > ###### 2. In a script, initialize a dictionary that maps the Strings Facebook, Instagram, Twitter, YouTube, Reddit, and LinkedIn to a UInt64 that represents the order in which you use them from most to least. For example, YouTube --> 1, Reddit --> 2, etc. If you've never used one before, map it to 0!
 
 > ###### 3. Explain what the force unwrap operator ! does, with an example different from the one I showed you (you can just change the type).
 
 > ###### 4. Using this picture below, explain...a)What the error message means b)Why we're getting this error c)How to fix it
->  ##### a) The error message "mismatched types. expected 'String', got 'String?'" means it was expecting a string but got a string optional.
-
+  ##### a) The error message "mismatched types. expected 'String', got 'String?'" means it was expecting a string but got a string optional.
+  ##### b)
+  ##### c)
 ```diff
 - Day_4
 ```
