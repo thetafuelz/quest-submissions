@@ -61,11 +61,8 @@
 
 > ###### 3. Explain what the force unwrap operator ! does, with an example different from the one I showed you (you can just change the type).
 
-> ###### 4. Using this picture below, explain...
-
-What the error message means
-Why we're getting this error
-How to fix it
+> ###### 4. Using this picture below, explain...a)What the error message means b)Why we're getting this error c)How to fix it
+>  ##### a) The error message "mismatched types. expected 'String', got 'String?'" means it was expecting a string but got a string optional.
 
 ```diff
 - Day_4
