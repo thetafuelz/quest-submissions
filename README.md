@@ -64,21 +64,21 @@
    ![alt text](https://github.com/thetafuelz/quest-submissions/blob/449a71bf5ef0cb0c40d02850b1ca15f3e0af9356/img/C2D3_Q3.JPG)
    
 > ###### 4. Using this picture below, explain...a)What the error message means b)Why we're getting this error c)How to fix it
-  ##### a) The error message "mismatched types. expected 'String', got 'String?'" means it was expecting a string but got a string optional.
-  ##### b)
-  ##### c)
+  ##### a) The error message "mismatched types. expected 'String', got 'String?'" means it was expecting a string but receieved a string optional.
+  ##### b) We are getting this message because the output can also be nil so an optional must be used. 
+  ##### c) We can fix this error by placing an force unwrap operator (!) after the return statement to unwrap the optional type and return the actual value type.
 ```diff
+
 - Day_4
 ```
 > ###### 1. Deploy a new contract that has a Struct of your choosing inside of it (must be different than Profile).
-
 > ###### 2. Create a dictionary or array that contains the Struct you defined.
-
 > ###### 3. Create a function to add to that array/dictionary.
-
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/f85569f8132df2c11f17375f106ac04bb84136e7/img/C2D4_Q123.JPG)
 > ###### 4. Add a transaction to call that function in step 3.
-
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/f85569f8132df2c11f17375f106ac04bb84136e7/img/C2D4_Q4.JPG)
 > ###### 5. Add a script to read the Struct you defined
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/f85569f8132df2c11f17375f106ac04bb84136e7/img/C2D4_Q5.JPG)
 
 ```diff
 @@ Chapter_3 Quests @@
