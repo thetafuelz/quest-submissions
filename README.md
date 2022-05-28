@@ -87,11 +87,17 @@
 - Day_1
 ```
 > ###### 1. In words, list 3 reasons why structs are different from resources.
+ ##### 
 > ###### 2. Describe a situation where a resource might be better to use than a struct.
+#####
 > ###### 3. Describe a situation where a resource might be better to use than a struct.
+#####
 > ###### 4. Can a resource be created in a script or transaction (assuming there isn't a public function to create one)?
+#####
 > ###### 5. What is the type of the resource below?
+#####
 > ###### 6. Let's play the "I Spy" game from when we were kids. I Spy 4 things wrong with this code. Please fix them.
+#####
 
 ```diff
 - Day_2
@@ -104,13 +110,16 @@
 >###### 1. Define your own contract that stores a dictionary of resources. Add a function to get a reference to one of the resources in the dictionary.
 >###### 2. Create a script that reads information from that resource using the reference from the function you defined in part 1.
 >###### 3. Explain, in your own words, why references can be useful in Cadence.
+#####
 
 ```diff
 - Day_4
 ```
 >###### 1. Explain, in your own words, the 2 things resource interfaces can be used for (we went over both in today's content)
+#####
 >###### 2. Define your own contract. Make your own resource interface and a resource that implements the interface. Create 2 functions. In the 1st function, show an example of not restricting the type of the resource and accessing its content. In the 2nd function, show an example of restricting the type of the resource and NOT being able to access its content.
 >###### 3. How would we fix this code?
+#####
 
 ```diff
 - Day_5
@@ -124,10 +133,15 @@
 - Day_1
 ```
 >###### 1. Explain what lives inside of an account.
+#####
 >###### 2. What is the difference between the /storage/, /public/, and /private/ paths?
+#####
 >###### 3. What does .save() do? What does .load() do? What does .borrow() do?
+#####
 >###### 4. Explain why we couldn't save something to our account storage inside of a script.
+#####
 >###### 5. Explain why I couldn't save something to your account.
+#####
 >###### 6. Define a contract that returns a resource that has at least 1 field in it. Then, write 2 transactions:
             i. A transaction that first saves the resource to account storage, then loads it out of account storage, 
             logs a field inside the resource, and destroys it.
@@ -139,7 +153,9 @@
 - Day_2
 ```
 >###### 1. What does .link() do?
+#####
 >###### 2. In your own words (no code), explain how we can use resource interfaces to only expose certain things to the /public/ path.
+#####
 >###### 3. Deploy a contract that contains a resource that implements a resource interface. Then, do the following:
 
             i. In a transaction, save the resource to storage and link it to the public with the restrictive interface.
@@ -152,7 +168,9 @@
 - Day_3
 ```
 >###### 1. Why did we add a Collection to this contract? List the two main reasons.
+#####
 >###### 2. What do you have to do if you have resources "nested" inside of another resource? ("Nested resources")
+#####
 >###### 3. Brainstorm some extra things we may want to add to this contract. Think about what might be problematic with this contract and how we could fix it.
 
           Idea #1: Do we really want everyone to be able to mint an NFT? 🤔.
@@ -173,22 +191,29 @@
 - Day_1
 ```
 >###### 1. Describe what an event is, and why it might be useful to a client.
+#####
 >###### 2. Deploy a contract with an event in it, and emit the event somewhere else in the contract indicating that it happened.
+#####
 >###### 3. Using the contract in step 2), add some pre conditions and post conditions to your contract to get used to writing them out.
+#####
 >###### 4. For each of the functions below (numberOne, numberTwo, numberThree), follow the instructions.
 
 ```diff
 - Day_2
 ```
 >###### 1. Explain why standards can be beneficial to the Flow ecosystem.
+#####
 >###### 2. What is YOUR favourite food?
+#####
 >###### 3. Please fix this code (Hint: There are two things wrong):
 
 ```diff
 - Day_3
 ```
 >###### 1. What does "force casting" with as! do? Why is it useful in our Collection?
+#####
 >###### 2. What does auth do? When do we use it?
+#####
 >###### 3. This last quest will be your most difficult yet. Take this contract:
             and add a function called borrowAuthNFT just like we did in the section called "The Problem" above. Then, find a way to make it publically accessible to other people so they can read our NFT's metadata. Then, run a script to display the NFTs metadata for a certain id.
 
