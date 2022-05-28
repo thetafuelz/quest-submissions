@@ -65,7 +65,7 @@
    
 > ###### 4. Using this picture below, explain...a)What the error message means b)Why we're getting this error c)How to fix it
   ##### a) The error message "mismatched types. expected 'String', got 'String?'" means it was expecting a string but receieved a string optional.
-  ##### b) We are getting this message because the output can also be nil so an optional must be used. 
+  ##### b) We are getting this message because the output can also be nil so an unwrap operator must be used. 
   ##### c) We can fix this error by placing an force unwrap operator (!) after the return statement to unwrap the optional type and return the actual value type.
 ```diff
 
