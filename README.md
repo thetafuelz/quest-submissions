@@ -87,7 +87,7 @@
 - Day_1
 ```
 > ###### 1. In words, list 3 reasons why structs are different from resources.
- ##### 
+ ##### Structs can be copied, overwritten, and created at any time. Resources cannot be copied, cannot be lost/overwritten, and cannot be created whenver you want. Aside from that resources can only exist in 1 location at a time and must be used EXACTLY ONCE. Use ```create``` keyword to create and must be moved or destroyed using ```destroy ``` at the end of a function. Overall resources are much harder to deal with.
 > ###### 2. Describe a situation where a resource might be better to use than a struct.
 #####
 > ###### 3. Describe a situation where a resource might be better to use than a struct.
