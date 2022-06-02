@@ -102,7 +102,9 @@
 ##### The resource type is called Jacob.?
 
 > ###### 6. Let's play the "I Spy" game from when we were kids. I Spy 4 things wrong with this code. Please fix them.
-#####
+##### 1. pub fun createJacob(): ```@``` Jacob {
+##### 2.&3. let myJacob ```<--``` ```create``` Jacob() 
+##### 4. return ```<--``` myJacob
 
 ```diff
 - Day_2
