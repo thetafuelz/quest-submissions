@@ -88,14 +88,19 @@
 ```
 > ###### 1. In words, list 3 reasons why structs are different from resources.
  ##### Structs can be copied, overwritten, and created at any time. Resources cannot be copied, cannot be lost/overwritten, and cannot be created whenver you want. Aside from that resources can only exist in 1 location at a time and must be used EXACTLY ONCE. Use ```create``` keyword to create and must be moved or destroyed using ```destroy ``` at the end of a function. Overall resources are much harder to deal with.
+ 
 > ###### 2. Describe a situation where a resource might be better to use than a struct.
-#####
-> ###### 3. Describe a situation where a resource might be better to use than a struct.
-#####
+##### Resources are better utilized when creating NFT's. They can only have one owner, cannot be copied, and cannot be accidentally or maliciously lost or duplicated.  They also can only be created in the contract and nowhere else. This will keep the owner's mind at ease knowing that their NFT is safe and stored in their account.
+
+> ###### 3. What is the keyword to make a new resource?
+##### ```create```is used to make a new resource. 
+
 > ###### 4. Can a resource be created in a script or transaction (assuming there isn't a public function to create one)?
-#####
+##### No, a resource cannot be created in a script or transaction. It can only be created in the contract, unlike structs.
+
 > ###### 5. What is the type of the resource below?
-#####
+##### The resource type is called Jacob.?
+
 > ###### 6. Let's play the "I Spy" game from when we were kids. I Spy 4 things wrong with this code. Please fix them.
 #####
 
