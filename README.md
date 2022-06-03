@@ -169,13 +169,13 @@ pub contract Test {
 - Day_4
 ```
 >###### 1. Explain, in your own words, the 2 things resource interfaces can be used for (we went over both in today's content)
-##### There 3 kinds of interfaces: structure, resource, and contract. Resource interfaces can be used for restricting access to parts of the resource and secondly can be used as a requirement for something to be implemented.
+##### There are 3 kinds of interfaces: structure, resource, and contract. Resource interfaces can be used for restricting access to parts of the resource and secondly can be used as a requirement for something to be implemented.
 >###### 2. Define your own contract. Make your own resource interface and a resource that implements the interface. Create 2 functions. In the 1st function, show an example of not restricting the type of the resource and accessing its content. In the 2nd function, show an example of restricting the type of the resource and NOT being able to access its content.
 ```cadence
 
 ```
 >###### 3. How would we fix this code?
-#####
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/12bad649c48d08b0a04bde15e23bde867cbed8ab/img/Ch3D4_Q3.JPG)
 
 ```diff
 - Day_5
