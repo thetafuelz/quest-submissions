@@ -103,13 +103,53 @@
 
 > ###### 6. Let's play the "I Spy" game from when we were kids. I Spy 4 things wrong with this code. Please fix them.
 ##### 1. pub fun createJacob(): ```@``` Jacob {
-##### 2.&3. let myJacob ```<--``` ```create``` Jacob() 
-##### 4. return ```<--``` myJacob
+##### 2.&3. let myJacob ```<-``` ```create``` Jacob() 
+##### 4. return ```<-``` myJacob
 
 ```diff
 - Day_2
 ```
 >###### 1. Write your own smart contract that contains two state variables: an array of resources, and a dictionary of resources. Add functions to remove and add to each of them. They must be different from the examples above.
+```
+pub contract Test {
+
+    pub var arrayOfBallerz: @[Ballerz]
+
+    pub var dictionaryOfBallerz: @{String: Ballerz}
+
+    pub resource Ballerz {
+        pub let ballerzName: String
+        init() {
+            self.ballerzName = "Player"
+        }
+    }
+
+    pub fun addToBaller(ballerz: @Ballerz) {
+        self.arrayOfBallerz.append(<- ballerz)
+    }
+
+    pub fun removeFromBallerz(index: Int): @Ballerz {
+        return <- self.arrayOfBallerz.remove(at: index)
+    }
+
+
+    pub fun addBallerz(ballerz: @Ballerz) {
+        let key = ballerz.ballerzName     
+        let oldBallerzName <- self.dictionaryOfBallerz[key] <- ballerz
+        destroy oldBallerzName
+    }
+
+    pub fun removeBallerz(key: String): @Ballerz {
+        let ballerz <- self.dictionaryOfBallerz.remove(key: key)!
+        return <- ballerz
+    }
+
+    init() {
+        self.dictionaryOfBallerz <- {}
+        self.arrayOfBallerz <- []
+    }
+
+}```
 
 ```diff
 - Day_3
