@@ -4,7 +4,7 @@
 ```
 
 ```diff
-- Day_1
+- CH.1 Day_1
 ```
 
 > ###### 1. Explain what the Blockchain is in your own words.
@@ -16,7 +16,7 @@
 > ###### 3. Explain the difference between a script and a transaction.
  ##### Both script and transaction are Cadence snippets, but are entirely different in terms of functionality. Transactions can access signing accounts, fetch their            storage values, executes on those values, and can contain post conditions. Scripts do not have permission to change data on the blockchain and can only read from        the public account storage.
 ```diff
-- Day_2
+- CH.1 Day_2
 ```
 
 > ###### 1. What are the 5 Cadence Programming Language Pillars?
@@ -32,7 +32,7 @@
 @@ Chapter_2 Quests @@
 ```
 ```diff
-- Day_1
+- CH.2 Day_1
 ```
 1.
 ![alt text](https://github.com/thetafuelz/quest-submissions/blob/cdb392f51b2696468bb0311c9df76b82480a7e8d/img/Ch2D1.JPG)
@@ -40,7 +40,7 @@
 ![alt text](https://github.com/thetafuelz/quest-submissions/blob/cdb392f51b2696468bb0311c9df76b82480a7e8d/img/Ch2D2.JPG)
 
 ```diff
-- Day_2
+- CH.2 Day_2
 ```
 > ###### 1. Explain why we wouldn't call changeGreeting in a script.
    ##### We wouldn't call changeGreeting in a script because a script is only to view state not modify it, so changing the greeting can only be done in the transaction.
@@ -53,7 +53,7 @@
 ![alt text](https://github.com/thetafuelz/quest-submissions/blob/d441b0fcef9e8067a2f4794fe0a9adfda1900a95/img/Ch2D2_2.JPG)
 ![alt text](https://github.com/thetafuelz/quest-submissions/blob/d441b0fcef9e8067a2f4794fe0a9adfda1900a95/img/Ch2D2_3.JPG)
 ```diff
-- Day_3
+- CH.2 Day_3
 ```
 > ###### 1. In a script, initialize an array (that has length == 3) of your favourite people, represented as Strings, and log it.
 ![alt text](https://github.com/thetafuelz/quest-submissions/blob/dc004595da7c67199033a8c2e35e76b7c4554b80/img/C2D3_Q1.JPG) 
@@ -69,7 +69,7 @@
   ##### c) We can fix this error by placing an force unwrap operator (!) after the return statement to unwrap the optional type and return the actual value type.
 ```diff
 
-- Day_4
+- CH.2 Day_4
 ```
 > ###### 1. Deploy a new contract that has a Struct of your choosing inside of it (must be different than Profile).
 > ###### 2. Create a dictionary or array that contains the Struct you defined.
@@ -84,7 +84,7 @@
 @@ Chapter_3 Quests @@
 ```
 ```diff
-- Day_1
+- CH.3 Day_1
 ```
 > ###### 1. In words, list 3 reasons why structs are different from resources.
  ##### Structs can be copied, overwritten, and created at any time. Resources cannot be copied, cannot be lost/overwritten, and cannot be created whenver you want. Aside from that resources can only exist in 1 location at a time and must be used EXACTLY ONCE. Use ```create``` keyword to create and must be moved or destroyed using ```destroy ``` at the end of a function. Overall resources are much harder to deal with.
@@ -107,7 +107,7 @@
 ##### 4. return ```<-``` myJacob
 
 ```diff
-- Day_2
+- CH.3 Day_2
 ```
 >###### 1. Write your own smart contract that contains two state variables: an array of resources, and a dictionary of resources. Add functions to remove and add to each of them. They must be different from the examples above.
 ```cadence
@@ -154,7 +154,7 @@ pub contract Test {
 /end
 
 ```diff
-- Day_3
+- CH.3 Day_3
 ```
 >###### 1. Define your own contract that stores a dictionary of resources. Add a function to get a reference to one of the resources in the dictionary.
 ![alt text](https://github.com/thetafuelz/quest-submissions/blob/6227408663b9a3d2fa060441c00aa80a4f2f645d/img/Ch3D3_Q1.JPG)
@@ -166,7 +166,7 @@ pub contract Test {
 ##### References are extrememly useful, esp. with ```resources```, because it allows you to keep the object at it's current location and still be able to reference as well as update it.
 
 ```diff
-- Day_4
+- CH.3 Day_4
 ```
 >###### 1. Explain, in your own words, the 2 things resource interfaces can be used for (we went over both in today's content)
 ##### There are 3 kinds of interfaces: structure, resource, and contract. Resource interfaces can be used for restricting access to parts of the resource and secondly can be used as a requirement for something to be implemented.
@@ -178,7 +178,7 @@ pub contract Test {
 ![alt text](https://github.com/thetafuelz/quest-submissions/blob/12bad649c48d08b0a04bde15e23bde867cbed8ab/img/Ch3D4_Q3.JPG)
 
 ```diff
-- Day_5
+- CH.3 Day_5
 ```
 >###### 1. For today's quest, you will be looking at a contract and a script. You will be looking at 4 variables (a, b, c, d) and 3 functions (publicFunc, contractFunc, privateFunc) defined in SomeContract. In each AREA (1, 2, 3, and 4), I want you to do the following: for each variable (a, b, c, and d), tell me in which areas they can be read (read scope) and which areas they can be modified (write scope). For each function (publicFunc, contractFunc, and privateFunc), simply tell me where they can be called.
 ```cadence
@@ -284,7 +284,7 @@ access(all) contract SomeContract {
 @@ Chapter_4 Quests @@
 ```
 ```diff
-- Day_1
+- CH.4 Day_1
 ```
 >###### 1. Explain what lives inside of an account.
 #####
@@ -304,7 +304,7 @@ access(all) contract SomeContract {
             
 
 ```diff
-- Day_2
+- CH.4 Day_2
 ```
 >###### 1. What does .link() do?
 #####
@@ -319,7 +319,7 @@ access(all) contract SomeContract {
             iii. Run the script and access something you CAN read from. Return it from the script.
 
 ```diff
-- Day_3
+- CH.4 Day_3
 ```
 >###### 1. Why did we add a Collection to this contract? List the two main reasons.
 #####
@@ -332,7 +332,7 @@ access(all) contract SomeContract {
           Idea #2: If we want to read information about our NFTs inside our Collection, right now we have to take it out of the Collection to do so. Is this good?
           
 ```diff
-- Day_4
+- CH.4 Day_4
 ```
 >###### 1. Because we had a LOT to talk about during this Chapter, I want you to do the following:
           Take our NFT contract so far and add comments to every single resource or function explaining what it's doing in your own words. 
@@ -342,7 +342,7 @@ access(all) contract SomeContract {
 @@ Chapter_5 Quests @@
 ```
 ```diff
-- Day_1
+- CH.5 Day_1
 ```
 >###### 1. Describe what an event is, and why it might be useful to a client.
 #####
@@ -353,7 +353,7 @@ access(all) contract SomeContract {
 >###### 4. For each of the functions below (numberOne, numberTwo, numberThree), follow the instructions.
 
 ```diff
-- Day_2
+- CH.5 Day_2
 ```
 >###### 1. Explain why standards can be beneficial to the Flow ecosystem.
 #####
@@ -362,7 +362,7 @@ access(all) contract SomeContract {
 >###### 3. Please fix this code (Hint: There are two things wrong):
 
 ```diff
-- Day_3
+- CH.5 Day_3
 ```
 >###### 1. What does "force casting" with as! do? Why is it useful in our Collection?
 #####
