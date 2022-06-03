@@ -157,9 +157,11 @@ pub contract Test {
 - Day_3
 ```
 >###### 1. Define your own contract that stores a dictionary of resources. Add a function to get a reference to one of the resources in the dictionary.
-![alt text](https://github.com/thetafuelz/quest-submissions/blob/f85569f8132df2c11f17375f106ac04bb84136e7/img/Ch3D3_Q1.JPG)
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/6227408663b9a3d2fa060441c00aa80a4f2f645d/img/Ch3D3_Q1.JPG)
+
 >###### 2. Create a script that reads information from that resource using the reference from the function you defined in part 1.
-![alt text](https://github.com/thetafuelz/quest-submissions/blob/f85569f8132df2c11f17375f106ac04bb84136e7/img/Ch3D3_Q2.JPG)
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/6227408663b9a3d2fa060441c00aa80a4f2f645d/img/Ch3D3_Q2.JPG)
+
 >###### 3. Explain, in your own words, why references can be useful in Cadence.
 ##### References are extrememly useful, esp. with ```resources```, because it allows you to keep the object at it's current location and still be able to reference as well as update it.
 
