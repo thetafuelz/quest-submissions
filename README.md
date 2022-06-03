@@ -279,6 +279,25 @@ access(all) contract SomeContract {
     }
 }
 ```
+
+```cadence
+import SomeContract from 0x01
+
+pub fun main() {
+  /**************/
+  /*** AREA 4 ***/
+  /**************/
+  
+  // (a) Read: Y Write: N
+  // (b) Read: Y Write: N
+  // (c) Read: N Write: N
+  // (d) Read: N Write: N
+
+  // publicFunc() - Called Here: Y
+  // contractFunc() - Called Here: N
+  // privateFunc() - Called Here: N
+```
+}
 /end
 ```diff
 @@ Chapter_4 Quests @@
@@ -287,15 +306,17 @@ access(all) contract SomeContract {
 - CH.4 Day_1
 ```
 >###### 1. Explain what lives inside of an account.
-#####
+##### Inside of an account, there is contract code and account storage.
+##### A contract gets deployed to an account where it stays and each account can have multiple contracts. All of your data (i.e.NFTs) are stored in the account storage where you can make it accessible via three different paths: ```storage```, ```private```, and ```public```
 >###### 2. What is the difference between the /storage/, /public/, and /private/ paths?
-#####
+##### In ```storage``` only you, the account holder have access to this data, ```private``` can only be accessed by who you give permission to, and ```public``` is viewable by everyone.
 >###### 3. What does .save() do? What does .load() do? What does .borrow() do?
-#####
+##### ```.save()``` saves data inside the account ```storage```,```.load()``` takes out the stored data from account storage and ```.borrow()``` gets a reference to a resource in account ```storage```.
 >###### 4. Explain why we couldn't save something to our account storage inside of a script.
-#####
+##### We can't save to our account storage inside of a script because we can only read what is stored and you need AuthAccount to access storage.
 >###### 5. Explain why I couldn't save something to your account.
-#####
+##### You need permission, in this case AuthAccount to sign off on the transaction giving access to save something to the account.
+
 >###### 6. Define a contract that returns a resource that has at least 1 field in it. Then, write 2 transactions:
             i. A transaction that first saves the resource to account storage, then loads it out of account storage, 
             logs a field inside the resource, and destroys it.
@@ -307,9 +328,10 @@ access(all) contract SomeContract {
 - CH.4 Day_2
 ```
 >###### 1. What does .link() do?
-#####
+##### .link() helps to make data in /storage/ path available to anyone as a /public/ path. Simply makes what we have stored, accessible for others to access. It also, gives allows to limit what is been exposed to the public via interface restrictions.
+
 >###### 2. In your own words (no code), explain how we can use resource interfaces to only expose certain things to the /public/ path.
-#####
+##### 
 >###### 3. Deploy a contract that contains a resource that implements a resource interface. Then, do the following:
 
             i. In a transaction, save the resource to storage and link it to the public with the restrictive interface.
