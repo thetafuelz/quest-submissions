@@ -157,16 +157,21 @@ pub contract Test {
 - Day_3
 ```
 >###### 1. Define your own contract that stores a dictionary of resources. Add a function to get a reference to one of the resources in the dictionary.
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/f85569f8132df2c11f17375f106ac04bb84136e7/img/C3D3_Q1.JPG)
 >###### 2. Create a script that reads information from that resource using the reference from the function you defined in part 1.
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/f85569f8132df2c11f17375f106ac04bb84136e7/img/C3D3_Q2.JPG)
 >###### 3. Explain, in your own words, why references can be useful in Cadence.
-#####
+##### References are extrememly useful, esp. with ```resources```, because it allows you to keep the object at it's current location and still be able to reference as well as update it.
 
 ```diff
 - Day_4
 ```
 >###### 1. Explain, in your own words, the 2 things resource interfaces can be used for (we went over both in today's content)
-#####
+##### There 3 kinds of interfaces: structure, resource, and contract. Resource interfaces can be used for restricting access to parts of the resource and secondly can be used as a requirement for something to be implemented.
 >###### 2. Define your own contract. Make your own resource interface and a resource that implements the interface. Create 2 functions. In the 1st function, show an example of not restricting the type of the resource and accessing its content. In the 2nd function, show an example of restricting the type of the resource and NOT being able to access its content.
+```cadence
+
+```
 >###### 3. How would we fix this code?
 #####
 
