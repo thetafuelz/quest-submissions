@@ -328,10 +328,9 @@ pub fun main() {
 - CH.4 Day_2
 ```
 >###### 1. What does .link() do?
-##### .link() helps to make data in /storage/ path available to anyone as a /public/ path. Simply makes what we have stored, accessible for others to access. It also, gives allows to limit what is been exposed to the public via interface restrictions.
-
+##### .link() function is used to assign references to the /public/ or /private/ path so others can access the data.
 >###### 2. In your own words (no code), explain how we can use resource interfaces to only expose certain things to the /public/ path.
-##### 
+##### We can use the resource interface to only expose certain fields that we want to be seen by the user.
 >###### 3. Deploy a contract that contains a resource that implements a resource interface. Then, do the following:
 
             i. In a transaction, save the resource to storage and link it to the public with the restrictive interface.
@@ -344,21 +343,103 @@ pub fun main() {
 - CH.4 Day_3
 ```
 >###### 1. Why did we add a Collection to this contract? List the two main reasons.
-#####
+##### The two main reasons a ```Collection```is used is 1) reduce the # of storage paths to 1 and 2) all others to deposit into that collection.
 >###### 2. What do you have to do if you have resources "nested" inside of another resource? ("Nested resources")
-#####
+##### When you have resources "nested" inside of another resource you must use the ```destroy``` function to manually remove those resources
 >###### 3. Brainstorm some extra things we may want to add to this contract. Think about what might be problematic with this contract and how we could fix it.
-
-          Idea #1: Do we really want everyone to be able to mint an NFT? 🤔.
-
+          Idea #1: Do we really want everyone to be able to mint an NFT? 🤔
+##### No we do not want everyone to be able to mint an NFT. We could use resource interfaces to implement this restriction.          
           Idea #2: If we want to read information about our NFTs inside our Collection, right now we have to take it out of the Collection to do so. Is this good?
-          
+##### No, moving around data to read is neither a good idea or is it safe. We could use references for this purpose. 
+
 ```diff
 - CH.4 Day_4
 ```
 >###### 1. Because we had a LOT to talk about during this Chapter, I want you to do the following:
           Take our NFT contract so far and add comments to every single resource or function explaining what it's doing in your own words. 
           Something like this:
+          ```cadence
+          pub contract CryptoPoops {
+  pub var totalSupply: UInt64
+
+  // This is an NFT resource that contains a name,
+  // favouriteFood, and luckyNumber
+  pub resource NFT {
+    pub let id: UInt64
+
+    pub let name: String
+    pub let favouriteFood: String
+    pub let luckyNumber: Int
+
+    init(_name: String, _favouriteFood: String, _luckyNumber: Int) {
+      self.id = self.uuid
+
+      self.name = _name
+      self.favouriteFood = _favouriteFood
+      self.luckyNumber = _luckyNumber
+    }
+  }
+
+  // This is a resource interface that limit what we want exposed to the /public/ path from the /storage/CollectionPublic
+  // Allows the collection to be viewed as public, making deposit, get, and borrow an NFT available for others to use 
+  pub resource interface CollectionPublic {
+    pub fun deposit(token: @NFT)
+    pub fun getIDs(): [UInt64]
+    pub fun borrowNFT(id: UInt64): &NFT
+  }
+  // This resource Collection links to the resource interface allowing to view ids of the NFTs
+  pub resource Collection: CollectionPublic {
+    pub var ownedNFTs: @{UInt64: NFT}
+    // This function deposits NFTs into the account
+    pub fun deposit(token: @NFT) {
+      self.ownedNFTs[token.id] <-! token
+    }
+    // This functioni withdraws NFTs
+    pub fun withdraw(withdrawID: UInt64): @NFT {
+      let nft <- self.ownedNFTs.remove(key: withdrawID) 
+              ?? panic("This NFT does not exist in this Collection.")
+      return <- nft
+    }
+    // This function gets the ownedNFT ids
+    pub fun getIDs(): [UInt64] {
+      return self.ownedNFTs.keys
+    }
+    // This function borrows NFT and then returns an NFT reference.
+    pub fun borrowNFT(id: UInt64): &NFT {
+      return &self.ownedNFTs[id] as &NFT
+    }
+
+    init() {
+      self.ownedNFTs <- {}
+    }
+    // This function destorys the nested resource
+    destroy() {
+      destroy self.ownedNFTs
+    }
+  }
+  // This function creates a new collection
+  pub fun createEmptyCollection(): @Collection {
+    return <- create Collection()
+  }
+  // This resource allows the owner that deployed the contract to mint the allowed NFT
+  pub resource Minter {
+    // This function creates an NFT with three metadatas with value types of 1 Integer and 2 strings
+    pub fun createNFT(name: String, favouriteFood: String, luckyNumber: Int): @NFT {
+      return <- create NFT(_name: name, _favouriteFood: favouriteFood, _luckyNumber: luckyNumber)
+    }
+    // This function creates the minter role
+    pub fun createMinter(): @Minter {
+      return <- create Minter()
+    }
+
+  }
+  // This initializes total supply and saves the minter role in storage
+  init() {
+    self.totalSupply = 0
+    self.account.save(<- create Minter(), to: /storage/Minter)
+  }
+}```
+/end
 
 ```diff
 @@ Chapter_5 Quests @@
