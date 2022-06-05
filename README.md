@@ -363,7 +363,7 @@ pub fun main() {
           Take our NFT contract so far and add comments to every single resource or function explaining what it's doing in your own words. 
           Something like this:
           
-##### ```cadence
+```cadence
           pub contract CryptoPoops {
   pub var totalSupply: UInt64
 
@@ -456,7 +456,8 @@ pub fun main() {
 ##### Events, which are only declared in a contract, is a special value that allows us to be updated without having to specifically check for updates. This saves time and is a feature that is desirable int he NFT space
 >###### 2. Deploy a contract with an event in it, and emit the event somewhere else in the contract indicating that it happened.
 >###### 3. Using the contract in step 2), add some pre conditions and post conditions to your contract to get used to writing them out.
-##### Answer for Questions 2&3 ```cadence
+##### Answer for Questions 2&3 
+```cadence
 pub contract Test {
 
    pub event NewBallerz (ballerzName: String, ballerzType: String)
