@@ -338,12 +338,14 @@ pub fun main() {
 >###### 2. In your own words (no code), explain how we can use resource interfaces to only expose certain things to the /public/ path.
 ##### We can use the resource interface to only expose certain fields that we want to be seen by the user.
 >###### 3. Deploy a contract that contains a resource that implements a resource interface. Then, do the following:
-
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/b578236e7e613ec09c54be56a39c6d504d9ce7e0/img/Ch4D2_Q2a.JPG)
             i. In a transaction, save the resource to storage and link it to the public with the restrictive interface.
-
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/b578236e7e613ec09c54be56a39c6d504d9ce7e0/img/Ch4D2_Q2b.JPG)
             ii. Run a script that tries to access a non-exposed field in the resource interface, and see the error pop up.
-
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/b578236e7e613ec09c54be56a39c6d504d9ce7e0/img/Ch4D2_Q2c.JPG)
             iii. Run the script and access something you CAN read from. Return it from the script.
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/b578236e7e613ec09c54be56a39c6d504d9ce7e0/img/Ch4D2_Q2d.JPG)
+
 
 ```diff
 - CH.4 Day_3
