@@ -454,10 +454,103 @@ pub fun main() {
 >###### 1. Describe what an event is, and why it might be useful to a client.
 ##### Events, which are only declared in a contract, is a special value that allows us to be updated without having to specifically check for updates. This saves time and is a feature that is desirable int he NFT space
 >###### 2. Deploy a contract with an event in it, and emit the event somewhere else in the contract indicating that it happened.
-#####
 >###### 3. Using the contract in step 2), add some pre conditions and post conditions to your contract to get used to writing them out.
-#####
+##### Answer for Questions 2&3 ```cadence
+pub contract Test {
+
+   pub event NewBallerz (ballerzName: String, ballerzType: String)
+
+   pub resource interface IBallerz {
+        pub var ballerzName: String
+    }
+
+    pub resource Ballerz: IBallerz {
+        pub var ballerzName: String
+        pub var ballerzType: String
+        
+    // Post condition to check that the Ballerz is not a Human
+    pub fun checkBallerzType(newBallerzType: String): String {
+        post {
+        result == "Human": "This Ballerz cannot be a Human"
+        }
+        return newBallerzType
+        
+        init() {
+            self.ballerzName = "Iverson"
+            self.ballerzType = "Alien" 
+        }
+    }
+
+    pub fun createBallerz(newBallerzName: String, newBallerzType: String): @Ballerz {
+        // Precondition that name is not less than 3 letters
+        pre {
+            newBallerzName.length > 3: "Please return a real name"
+        }
+
+        let ballerzAdded <- create Ballerz()
+      
+
+        emit NewBallerz (ballerzName: newBallerzName, ballerzType: newBallerzType)
+        
+        return <- ballerzAdded   
+    }
+
+
+    init() {
+    }
+
+}    ```
 >###### 4. For each of the functions below (numberOne, numberTwo, numberThree), follow the instructions.
+##### ```cadence
+pub contract Test {
+
+  // TODO
+  // Tell me whether or not this function will log the name.
+  // name: 'Jacob'
+  // ANSWER: Yes, it will log 'Jacob' as it meets the condition length of 5.
+  pub fun numberOne(name: String) {
+    pre {
+      name.length == 5: "This name is not cool enough."
+    }
+    log(name)
+  }
+
+  // TODO
+  // Tell me whether or not this function will return a value.
+  // name: 'Jacob'
+  // ANSWER: Yes, it will return 'Jacob Tucker' since "Tucker" was concatenated to "Jacob"
+  pub fun numberTwo(name: String): String {
+    pre {
+      name.length >= 0: "You must input a valid name."
+    }
+    post {
+      result == "Jacob Tucker"
+    }
+    return name.concat(" Tucker")
+  }
+
+  pub resource TestResource {
+    pub var number: Int
+
+    // TODO
+    // Tell me whether or not this function will log the updated number.
+    // Also, tell me the value of `self.number` after it's run.
+    // ANSWER: No, it will not log the updated number since the post condition has not been met. 
+    pub fun numberThree(): Int {
+      post {
+        before(self.number) == result + 1
+      }
+      self.number = self.number + 1
+      return self.number
+    }
+
+    init() {
+      self.number = 0
+    }
+
+  }
+
+} ```
 
 ```diff
 - CH.5 Day_2
