@@ -326,6 +326,9 @@ pub fun main() {
             logs a field inside the resource, and destroys it.
             ii. A transaction that first saves the resource to account storage, then borrows a reference to it, 
             and logs a field inside the resource.
+```cadence
+
+```
             
 
 ```diff
