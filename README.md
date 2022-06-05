@@ -322,14 +322,13 @@ pub fun main() {
 ##### You need permission, in this case AuthAccount to sign off on the transaction giving access to save something to the account.
 
 >###### 6. Define a contract that returns a resource that has at least 1 field in it. Then, write 2 transactions:
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/7d793cb344f25e99208b122025243ec002b732f8/img/Ch4D1_Q6a.JPG)
             i. A transaction that first saves the resource to account storage, then loads it out of account storage, 
             logs a field inside the resource, and destroys it.
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/7d793cb344f25e99208b122025243ec002b732f8/img/Ch4D1_Q6b.JPG)       
             ii. A transaction that first saves the resource to account storage, then borrows a reference to it, 
             and logs a field inside the resource.
-```cadence
-
-```
-            
+![alt text](https://github.com/thetafuelz/quest-submissions/blob/7d793cb344f25e99208b122025243ec002b732f8/img/Ch4D1_Q6c.JPG)
 
 ```diff
 - CH.4 Day_2
