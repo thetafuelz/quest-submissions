@@ -359,7 +359,7 @@ pub fun main() {
 ```diff
 - CH.4 Day_4
 ```
-###### 1. Because we had a LOT to talk about during this Chapter, I want you to do the following:
+>###### 1. Because we had a LOT to talk about during this Chapter, I want you to do the following:
           Take our NFT contract so far and add comments to every single resource or function explaining what it's doing in your own words. 
           Something like this:
           
@@ -458,10 +458,11 @@ pub fun main() {
 ##### Events, which are only declared in a contract, is a special value that allows us to be updated without having to specifically check for updates. This saves time and is a feature that is desirable int he NFT space
 >###### 2. Deploy a contract with an event in it, and emit the event somewhere else in the contract indicating that it happened.
 >###### 3. Using the contract in step 2), add some pre conditions and post conditions to your contract to get used to writing them out.
-##### Answer for Questions 2&3 
+
+>##### Answer for Questions 2&3 
 
 ```cadence
-pub contract Test {
+  pub contract Test {
 
    pub event NewBallerz (ballerzName: String, ballerzType: String)
 
@@ -504,12 +505,13 @@ pub contract Test {
     init() {
     }
 
-}```
+} 
+```
 
-###### 4. For each of the functions below (numberOne, numberTwo, numberThree), follow the instructions.
+>###### 4. For each of the functions below (numberOne, numberTwo, numberThree), follow the instructions.
 
 ```cadence
-pub contract Test {
+  pub contract Test {
 
   // TODO
   // Tell me whether or not this function will log the name.
