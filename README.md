@@ -452,7 +452,7 @@ pub fun main() {
 - CH.5 Day_1
 ```
 >###### 1. Describe what an event is, and why it might be useful to a client.
-#####
+##### Events, which are only declared in a contract, is a special value that allows us to be updated without having to specifically check for updates. This saves time and is a feature that is desirable int he NFT space
 >###### 2. Deploy a contract with an event in it, and emit the event somewhere else in the contract indicating that it happened.
 #####
 >###### 3. Using the contract in step 2), add some pre conditions and post conditions to your contract to get used to writing them out.
