@@ -296,8 +296,8 @@ pub fun main() {
   // publicFunc() - Called Here: Y
   // contractFunc() - Called Here: N
   // privateFunc() - Called Here: N
-```
-}
+
+}```
 /end
 ```diff
 @@ Chapter_4 Quests @@
