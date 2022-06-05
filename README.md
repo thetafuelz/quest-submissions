@@ -359,7 +359,7 @@ pub fun main() {
 ```diff
 - CH.4 Day_4
 ```
->###### 1. Because we had a LOT to talk about during this Chapter, I want you to do the following:
+###### 1. Because we had a LOT to talk about during this Chapter, I want you to do the following:
           Take our NFT contract so far and add comments to every single resource or function explaining what it's doing in your own words. 
           Something like this:
           
@@ -449,9 +449,11 @@ pub fun main() {
 ```diff
 @@ Chapter_5 Quests @@
 ```
+
 ```diff
 - CH.5 Day_1
 ```
+
 >###### 1. Describe what an event is, and why it might be useful to a client.
 ##### Events, which are only declared in a contract, is a special value that allows us to be updated without having to specifically check for updates. This saves time and is a feature that is desirable int he NFT space
 >###### 2. Deploy a contract with an event in it, and emit the event somewhere else in the contract indicating that it happened.
@@ -504,7 +506,7 @@ pub contract Test {
 
 }```
 
->###### 4. For each of the functions below (numberOne, numberTwo, numberThree), follow the instructions.
+###### 4. For each of the functions below (numberOne, numberTwo, numberThree), follow the instructions.
 
 ```cadence
 pub contract Test {
