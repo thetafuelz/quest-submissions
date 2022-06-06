@@ -113,7 +113,7 @@
 ```cadence
 pub contract Test {
 
-    pub var arrayOfBallerz: @[Ballerz]
+    pub var arrayOf: @[Ballerz]
 
     pub var dictionaryOfBallerz: @{String: Ballerz}
 
@@ -481,7 +481,7 @@ pub fun main() {
     // Post condition to check that the Ballerz is not a Human
     pub fun checkBallerzType(newBallerzType: String): String {
         post {
-        result == "Human": "This Ballerz cannot be a Human"
+        result != "Human": "This Ballerz cannot be a Human"
         }
         return newBallerzType
         
